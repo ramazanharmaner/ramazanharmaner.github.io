@@ -1,0 +1,111 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { MapPin, Github, Linkedin, Mail, Cpu, CircuitBoard } from "lucide-react";
+
+export function AboutSection() {
+  const containerVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+    },
+  };
+
+  const itemVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  return (
+    <section id="about" className="relative py-32 bg-[#020203] px-6 md:px-12 overflow-hidden border-y border-white/5">
+      {/* Background Code Texture - Super Subtle */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none font-mono text-[10px] text-cyan-500 overflow-hidden select-none p-10 leading-relaxed mix-blend-screen">
+        {Array.from({ length: 25 }).map((_, i) => (
+          <div key={i} className="whitespace-nowrap mb-2">
+            {`system.init(); load_uav_module("autonomous_v2"); vision.process(opencv_stream); memory.allocate(0x1F2A);`.repeat(8)}
+          </div>
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <motion.div 
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
+        >
+          {/* FOTOĞRAF ALANI (Sol - 5 Sütun) */}
+          <motion.div variants={itemVariant} className="lg:col-span-5 flex justify-center">
+            <div className="relative group">
+              {/* Dinamik Dönen Halkalar */}
+              <div className="absolute -inset-8 border border-cyan-400/20 rounded-full animate-[spin_15s_linear_infinite] group-hover:border-cyan-400/40 transition-colors duration-700"></div>
+              <div className="absolute -inset-4 border border-orange-500/20 rounded-full animate-[spin_10s_linear_infinite_reverse] group-hover:border-orange-500/50 transition-colors duration-700 shadow-[0_0_30px_rgba(249,115,22,0.1)]"></div>
+              
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border border-zinc-800 shadow-[0_0_60px_rgba(6,182,212,0.1)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-shadow duration-700">
+                <Image 
+                  src="/me.jpg" 
+                  alt="Ramazan Harmaner" 
+                  fill 
+                  className="object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/30 to-transparent mix-blend-overlay"></div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* METİN ALANI (Sağ - 7 Sütun) */}
+          <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+            <motion.div variants={itemVariant} className="space-y-3">
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
+                <Cpu className="w-4 h-4 text-cyan-500" />
+                <span className="text-[11px] font-mono uppercase tracking-[0.5em] text-cyan-500">About the Engineer</span>
+              </div>
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase text-white leading-none">
+                Ramazan <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-500">Harmaner</span>
+              </h2>
+            </motion.div>
+
+            {/* Yeni Mühendislik Paragrafı */}
+            <motion.p variants={itemVariant} className="text-zinc-400 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
+              As a dedicated <span className="text-white font-medium">Computer Systems Engineer</span> with a 10-year technical legacy, 
+              I specialize in the architecture of <span className="text-cyan-400">Autonomous UAVs</span> and high-precision 
+              <span className="text-orange-500"> Embedded Systems</span>. My expertise lies in bridging the gap between complex hardware 
+              and intelligent software solutions. Having led the <span className="text-white italic">ATA UAV Team</span> to international success 
+              and managed over <span className="text-white">$50,000 in research grants</span>, I bring a unique blend of technical mastery 
+              and strategic leadership to every system I build.
+            </motion.p>
+
+            {/* Başarılar ve Sosyal Medya Linkleri */}
+            <motion.div variants={itemVariant} className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-8 pt-6 border-t border-white/5">
+              <div className="flex gap-8">
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                  <p className="text-3xl font-black text-white tracking-tighter">3.20</p>
+                  <p className="text-[10px] font-mono uppercase text-cyan-500 tracking-widest mt-1">Academic GPA</p>
+                </div>
+                <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 backdrop-blur-sm">
+                  <p className="text-3xl font-black text-orange-400 tracking-tighter">$50K+</p>
+                  <p className="text-[10px] font-mono uppercase text-orange-500/80 tracking-widest mt-1">Research Funding</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6 sm:ml-4">
+                <div className="flex flex-col items-start gap-1">
+                  <div className="flex items-center gap-2 text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
+                    <MapPin className="size-3.5 text-cyan-400" /> Agawam, MA
+                  </div>
+                  <div className="flex items-center gap-2 text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
+                    <CircuitBoard className="size-3.5 text-orange-400" /> Embedded Engineer
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+        </motion.div>
+      </div>
+    </section>
+  );
+}

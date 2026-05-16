@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020203;
+  --foreground: #fafafa;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  background-image: 
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(6, 182, 212, 0.15), transparent),
+    radial-gradient(ellipse 80% 50% at 100% 100%, rgba(249, 115, 22, 0.08), transparent);
+  background-attachment: fixed;
+}
+
+/* Renk Değiştiren Nokta ve Kenarlık Animasyonu */
+@keyframes color-pulse {
+  0%, 100% { 
+    background-color: #06b6d4; 
+    border-color: #06b6d4;
+    box-shadow: 0 0 12px #06b6d4; 
+  }
+  50% { 
+    background-color: #f97316; 
+    border-color: #f97316;
+    box-shadow: 0 0 12px #f97316; 
+  }
+}
+
+.animate-status-pulse {
+  animation: color-pulse 2s infinite ease-in-out;
+}
+
+/* Yumuşak Dönüş Animasyonu (Fotoğraf Arkası İçin) */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
