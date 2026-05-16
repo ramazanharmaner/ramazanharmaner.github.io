@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin, Github, Linkedin, Mail, Cpu, CircuitBoard } from "lucide-react";
+import { MapPin, Cpu, CircuitBoard } from "lucide-react";
 
 export function AboutSection() {
   const containerVariant = {
