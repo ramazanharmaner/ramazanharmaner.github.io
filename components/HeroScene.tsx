@@ -47,27 +47,36 @@ function SystemArchitecture() {
 
   useEffect(() => {
     if (scrollGroupRef.current) {
+      const isMobile = window.innerWidth < 768;
+      
+      // Calculate responsive positions
+      const startX = isMobile ? 0 : 4.5;
+      const targetX = isMobile ? 0 : 3.5;
+      const targetY = isMobile ? 2.5 : 0.5;
+      const targetScale = isMobile ? 0.4 : 0.8;
+      const endY = isMobile ? 5 : 3;
+
       // Başlangıç animasyonu
-      scrollGroupRef.current.position.set(4.5, -2, -2);
+      scrollGroupRef.current.position.set(startX, -2, -2);
       scrollGroupRef.current.scale.set(0, 0, 0); 
       
       gsap.to(scrollGroupRef.current.position, {
-        y: 0.5,
-        x: 3.5,
+        y: targetY,
+        x: targetX,
         duration: 2.5,
         ease: "power3.out"
       });
 
       gsap.to(scrollGroupRef.current.scale, {
-        x: 0.8, y: 0.8, z: 0.8, // Daha küçük (scale)
+        x: targetScale, y: targetScale, z: targetScale,
         duration: 2.5,
         ease: "back.out(1.2)"
       });
 
       // Kaydırdıkça yukarı (ekrandan dışarı) çıksın ki diğer sayfalara taşmasın
       gsap.to(scrollGroupRef.current.position, {
-        y: 3,          // Yukarı doğru hareket
-        x: 4.5,         
+        y: endY,          
+        x: startX,         
         z: -3,
         scrollTrigger: {
           trigger: document.body,

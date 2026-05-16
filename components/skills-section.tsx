@@ -48,20 +48,20 @@ export function SkillsSection() {
   };
 
   return (
-    <section id="tech stack" className="py-32 bg-[#020203] px-6 md:px-12 relative overflow-hidden">
+    <section id="tech stack" className="py-20 md:py-32 bg-[#020203] px-4 md:px-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20 gap-6 md:gap-8"
         >
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+          <div className="space-y-2 md:space-y-4">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
               Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-500">Expertise</span>
             </h2>
-            <p className="text-zinc-500 font-mono text-[11px] uppercase tracking-[0.4em] flex items-center gap-2">
+            <p className="text-zinc-500 font-mono text-[9px] md:text-[11px] uppercase tracking-[0.4em] flex items-center gap-2">
               <span className="text-cyan-500">{'>'}</span> ./mastered_technologies.sh
             </p>
           </div>
@@ -74,13 +74,13 @@ export function SkillsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
           {skillGroups.map((group) => (
             <motion.div 
               variants={cardVariant}
               key={group.title}
-              className={`group p-10 bg-zinc-900/40 backdrop-blur-xl border border-white/5 rounded-[2rem] transition-all duration-500 relative overflow-hidden ${group.borderHover} ${group.shadowHover}`}
+              className={`group p-6 md:p-10 bg-zinc-900/40 backdrop-blur-xl border border-white/5 rounded-[1.5rem] md:rounded-[2rem] transition-all duration-500 relative overflow-hidden ${group.borderHover} ${group.shadowHover}`}
             >
               {/* Card Accent Glow */}
               <div className={`absolute -top-24 -right-24 size-48 blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ${group.bgHover}`}></div>
