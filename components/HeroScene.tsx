@@ -52,8 +52,8 @@ function SystemArchitecture() {
       // Calculate responsive positions
       const startX = isMobile ? 0 : 4.5;
       const targetX = isMobile ? 0 : 3.5;
-      const targetY = isMobile ? 2.5 : 0.5;
-      const targetScale = isMobile ? 0.4 : 0.8;
+      const targetY = isMobile ? 1.5 : 0.5;
+      const targetScale = isMobile ? 0.45 : 0.8;
       const endY = isMobile ? 5 : 3;
 
       // Başlangıç animasyonu
