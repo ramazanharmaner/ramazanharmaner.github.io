@@ -2,24 +2,25 @@
 
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, MapPin, ArrowUpRight, Terminal } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-const contactLinks = [
+const contactLinksData = [
   {
-    label: "Secure Email Protocol",
+    id: "email",
     value: "ramazanharmaner@gmail.com",
     href: "mailto:ramazanharmaner@gmail.com",
     icon: Mail,
     color: "group-hover:text-cyan-400"
   },
   {
-    label: "Professional Network",
+    id: "linkedin",
     value: "linkedin.com/in/ramazanharmaner",
     href: "https://linkedin.com/in/ramazanharmaner",
     icon: Linkedin,
     color: "group-hover:text-blue-500"
   },
   {
-    label: "Source Code Repository",
+    id: "github",
     value: "github.com/ramazanharmaner",
     href: "https://github.com/ramazanharmaner",
     icon: Github,
@@ -28,6 +29,7 @@ const contactLinks = [
 ];
 
 export function ContactSection() {
+  const { dict } = useLanguage();
   const containerVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,30 +67,30 @@ export function ContactSection() {
               <motion.div variants={itemVariant} className="space-y-3 md:space-y-4">
                 <div className="flex items-center gap-2 mb-2 md:mb-4">
                   <Terminal className="size-4 md:size-5 text-cyan-500" />
-                  <span className="text-[9px] md:text-[11px] font-mono text-cyan-500 tracking-[0.4em] uppercase">Initialize_Connection</span>
+                  <span className="text-[9px] md:text-[11px] font-mono text-cyan-500 tracking-[0.4em] uppercase">{dict.contact.subtitle}</span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
-                  Let’s <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-500 drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]">Connect</span>
+                  {dict.contact.titlePrefix}<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-500 drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]">{dict.contact.titleHighlight}</span>
                 </h2>
-                <p className="text-zinc-400 text-base md:text-xl font-light leading-relaxed max-w-md border-l-2 border-cyan-500/50 pl-4">
-                  Whether you have a question about <span className="text-white">embedded systems</span>, 
-                  robotics, or potential <span className="text-orange-400">collaboration</span>—my inbox is always open.
-                </p>
+                <p 
+                  className="text-zinc-400 text-base md:text-xl font-light leading-relaxed max-w-md border-l-2 border-cyan-500/50 pl-4"
+                  dangerouslySetInnerHTML={{ __html: dict.contact.description }}
+                />
               </motion.div>
 
               <motion.div variants={itemVariant} className="flex flex-wrap items-center gap-2 md:gap-3 text-zinc-400 font-mono text-[9px] md:text-[11px] uppercase tracking-widest bg-black/40 w-max px-3 py-2 md:px-4 md:py-2 rounded-full border border-white/5">
                 <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-cyan-500 animate-pulse shadow-[0_0_8px_rgba(6,182,212,0.8)]"></div>
                 <MapPin className="size-3.5 md:size-4" />
-                Agawam, MA 01001
+                {dict.contact.location}
               </motion.div>
             </div>
 
             {/* Right Side: Contact Links */}
             <div className="space-y-3 md:space-y-4">
-              {contactLinks.map((link) => (
+              {contactLinksData.map((link) => (
                 <motion.a 
                   variants={itemVariant}
-                  key={link.label}
+                  key={link.id}
                   href={link.href}
                   target="_blank"
                   className="group flex items-center justify-between p-4 md:p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
@@ -98,7 +100,7 @@ export function ContactSection() {
                       <link.icon className={`size-5 md:size-6 text-zinc-400 ${link.color} transition-colors duration-300`} />
                     </div>
                     <div>
-                      <p className="text-[9px] md:text-[11px] font-mono text-zinc-500 uppercase tracking-widest mb-1">{link.label}</p>
+                      <p className="text-[9px] md:text-[11px] font-mono text-zinc-500 uppercase tracking-widest mb-1">{dict.contact.links[link.id as keyof typeof dict.contact.links]}</p>
                       <p className="text-sm md:text-base font-semibold text-zinc-200 tracking-wide break-all">{link.value}</p>
                     </div>
                   </div>
@@ -120,7 +122,7 @@ export function ContactSection() {
         className="mt-20 text-center relative z-10"
       >
         <p className="text-[10px] font-mono uppercase tracking-[0.5em] text-zinc-700">
-          RH.DEV © 2026 | Engineering Excellence
+          {dict.contact.footer}
         </p>
       </motion.div>
     </section>

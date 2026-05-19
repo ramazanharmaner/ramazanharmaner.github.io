@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Cpu, CircuitBoard } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function AboutSection() {
+  const { dict } = useLanguage();
   const containerVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -61,7 +63,7 @@ export function AboutSection() {
             <motion.div variants={itemVariant} className="space-y-2 md:space-y-3">
               <div className="flex items-center gap-2 justify-center lg:justify-start">
                 <Cpu className="w-3.5 h-3.5 md:w-4 md:h-4 text-cyan-500" />
-                <span className="text-[9px] md:text-[11px] font-mono uppercase tracking-[0.5em] text-cyan-500">About the Engineer</span>
+                <span className="text-[9px] md:text-[11px] font-mono uppercase tracking-[0.5em] text-cyan-500">{dict.about.subtitle}</span>
               </div>
               <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase text-white leading-[1.1] md:leading-none">
                 Ramazan <br className="hidden md:block" /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-500">Harmaner</span>
@@ -69,35 +71,32 @@ export function AboutSection() {
             </motion.div>
 
             {/* Yeni Mühendislik Paragrafı */}
-            <motion.p variants={itemVariant} className="text-zinc-400 text-base md:text-xl font-light leading-relaxed max-w-3xl px-2 md:px-0">
-              As a dedicated <span className="text-white font-medium">Computer Systems Engineer</span> with a 10-year technical legacy, 
-              I specialize in the architecture of <span className="text-cyan-400">Autonomous UAVs</span> and high-precision 
-              <span className="text-orange-500"> Embedded Systems</span>. My expertise lies in bridging the gap between complex hardware 
-              and intelligent software solutions. Having led the <span className="text-white italic">ATA UAV Team</span> to international success 
-              and managed over <span className="text-white">$50,000 in research grants</span>, I bring a unique blend of technical mastery 
-              and strategic leadership to every system I build.
-            </motion.p>
+            <motion.p 
+              variants={itemVariant} 
+              className="text-zinc-400 text-base md:text-xl font-light leading-relaxed max-w-3xl px-2 md:px-0"
+              dangerouslySetInnerHTML={{ __html: dict.about.description }}
+            />
 
             {/* Başarılar ve Sosyal Medya Linkleri */}
             <motion.div variants={itemVariant} className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6 md:gap-8 pt-6 border-t border-white/5">
               <div className="flex flex-wrap justify-center gap-4 md:gap-8">
                 <div className="p-3 md:p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm min-w-[120px]">
                   <p className="text-2xl md:text-3xl font-black text-white tracking-tighter">3.20</p>
-                  <p className="text-[9px] md:text-[10px] font-mono uppercase text-cyan-500 tracking-widest mt-1">Academic GPA</p>
+                  <p className="text-[9px] md:text-[10px] font-mono uppercase text-cyan-500 tracking-widest mt-1">{dict.about.gpaLabel}</p>
                 </div>
                 <div className="p-3 md:p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 backdrop-blur-sm min-w-[120px]">
                   <p className="text-2xl md:text-3xl font-black text-orange-400 tracking-tighter">$50K+</p>
-                  <p className="text-[9px] md:text-[10px] font-mono uppercase text-orange-500/80 tracking-widest mt-1">Research Funding</p>
+                  <p className="text-[9px] md:text-[10px] font-mono uppercase text-orange-500/80 tracking-widest mt-1">{dict.about.fundingLabel}</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-6 sm:ml-4 mt-4 sm:mt-0">
                 <div className="flex flex-col items-center sm:items-start gap-2">
                   <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
-                    <MapPin className="size-3.5 text-cyan-400" /> Agawam, MA
+                    <MapPin className="size-3.5 text-cyan-400" /> {dict.about.location}
                   </div>
                   <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
-                    <CircuitBoard className="size-3.5 text-orange-400" /> Embedded Engineer
+                    <CircuitBoard className="size-3.5 text-orange-400" /> {dict.about.role}
                   </div>
                 </div>
               </div>

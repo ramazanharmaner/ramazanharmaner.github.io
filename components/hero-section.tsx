@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, TerminalSquare } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function HeroSection() {
+  const { dict } = useLanguage();
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -34,11 +36,11 @@ export function HeroSection() {
           <motion.div custom={0} variants={fadeUpVariant} className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 font-mono text-[9px] md:text-[11px] uppercase tracking-[0.2em]">
             <div className="flex w-max items-center gap-3 px-4 py-2 md:px-5 md:py-2 rounded-full border border-white/10 bg-black/40 backdrop-blur-xl shadow-[0_0_20px_rgba(255,255,255,0.03)]">
               <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(6,182,212,0.8)]"></span>
-              <span className="text-zinc-300">SYSTEM.STATUS: <span className="text-cyan-400">ONLINE</span></span>
+              <span className="text-zinc-300">{dict.hero.statusPrefix}<span className="text-cyan-400">{dict.hero.statusValue}</span></span>
             </div>
             <div className="flex w-max items-center gap-3 px-4 py-2 md:px-5 md:py-2 rounded-full border border-orange-500/20 bg-orange-500/10 backdrop-blur-xl text-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.1)]">
               <TerminalSquare className="w-3 h-3" />
-              Available for Architecture & Engineering
+              {dict.hero.availability}
             </div>
           </motion.div>
 
@@ -49,21 +51,21 @@ export function HeroSection() {
             </motion.h2>
             
             <motion.h1 custom={2} variants={fadeUpVariant} className="text-4xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-black leading-[1.1] md:leading-[0.95] tracking-tighter text-white uppercase">
-              Engineering <br className="hidden sm:block" />
+              {dict.hero.titlePrefix} <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-cyan-300 to-orange-500 drop-shadow-[0_0_30px_rgba(6,182,212,0.2)]">
-                Systems that Think.
+                {dict.hero.titleHighlight}
               </span>
             </motion.h1>
           </div>
 
           <motion.p custom={3} variants={fadeUpVariant} className="text-zinc-400 text-base md:text-2xl max-w-2xl font-light leading-relaxed border-l-2 border-orange-500/50 pl-4 md:pl-6">
-            Computer Systems Engineer specializing in <span className="text-cyan-300 font-medium drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">Autonomous UAVs</span> and 
-            <span className="text-orange-400 font-medium drop-shadow-[0_0_10px_rgba(249,115,22,0.4)]"> Embedded Architectures</span>.
+            {dict.hero.descriptionPrefix}<span className="text-cyan-300 font-medium drop-shadow-[0_0_10px_rgba(6,182,212,0.4)]">{dict.hero.descriptionHighlight1}</span>{dict.hero.descriptionAnd}
+            <span className="text-orange-400 font-medium drop-shadow-[0_0_10px_rgba(249,115,22,0.4)]"> {dict.hero.descriptionHighlight2}</span>{dict.hero.descriptionSuffix}
           </motion.p>
 
           <motion.div custom={4} variants={fadeUpVariant} className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 md:gap-8 pt-4 md:pt-8">
             <button className="px-6 py-3 md:px-8 md:py-4 bg-white text-black font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center gap-3 group shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(249,115,22,0.3)]">
-              Initialize Protocols <ArrowRight className="size-4 group-hover:translate-x-2 transition-transform duration-300" />
+              {dict.hero.button} <ArrowRight className="size-4 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
             <div className="flex items-center gap-6 text-zinc-500">
                <a href="https://github.com/ramazanharmaner" target="_blank" rel="noreferrer" className="hover:text-cyan-400 hover:scale-110 transition-all duration-300"><Github className="size-6" /></a>
