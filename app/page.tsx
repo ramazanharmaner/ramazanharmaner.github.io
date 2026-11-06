@@ -4,6 +4,8 @@ import { AboutSection } from "@/components/about-section";
 import { SkillsSection } from "@/components/skills-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { MetricsSection } from "@/components/metrics-section";
+import { ExperienceSection } from "@/components/experience-section";
+import { EducationSection } from "@/components/education-section";
 import { TimelineSection } from "@/components/timeline-section";
 import { ContactSection } from "@/components/contact-section";
 import HeroScene from "@/components/HeroScene";
@@ -47,7 +49,15 @@ export default function Home() {
         </section>
 
         <section className="bg-transparent">
+          <ExperienceSection />
+        </section>
+
+        <section className="bg-transparent">
           <TimelineSection />
+        </section>
+
+        <section className="bg-transparent">
+          <EducationSection />
         </section>
 
         <section className="bg-transparent">

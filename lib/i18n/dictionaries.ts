@@ -82,6 +82,43 @@ export const en = {
       }
     ]
   },
+  experience: {
+    titlePrefix: "Professional ",
+    titleHighlight: "Experience",
+    subtitleCmd: "./work_history.log",
+    items: [
+      { role: "Independent Consultant", org: "Freelance — POS, Embedded Hardware & Web Infra", period: "Jan 2023 – Present", location: "Massachusetts, US", desc: "Ongoing technical support for restaurant clients: POS hardware install, configuration and maintenance across vendor systems, plus client website and backend/data infrastructure upkeep." },
+      { role: "Co-Founder", org: "Multi-Tenant SaaS POS & Ordering Platform", period: "Mar – Jun 2026", location: "Remote, US", desc: "Co-founded a multi-tenant restaurant ordering & POS SaaS (React/Vite, Express/TypeScript, PostgreSQL, Stripe Connect) and contributed to the platform architecture." },
+      { role: "Private Instructor — Embedded Systems", org: "Freelance / Self-Employed", period: "2023 – Present", location: "Massachusetts, US", desc: "Designed and deliver a self-built Raspberry Pi & Arduino curriculum to high-school students on an ongoing weekly schedule." },
+      { role: "Mission Judge — AUVSI SUAS 2025", org: "RoboNation", period: "Jun 2025", location: "Maryland, US", desc: "Evaluated university teams' autonomous UAV mission performance at one of the premier collegiate unmanned-systems competitions." },
+      { role: "Embedded Systems Intern", org: "TÜBİTAK UME — National Metrology Institute", period: "Aug – Sep 2021", location: "Kocaeli, Turkey", desc: "Programmed an ARM STM32 for sensor-based temperature measurement with a Nextion LCD interface and a C#/Visual Studio ground-station app." },
+      { role: "Mid-Level Software Developer", org: "Atatürk University — ATAUZEM", period: "Oct 2020 – May 2022", location: "Erzurum, Turkey", desc: "Integrated and maintained the Moodle e-learning platform across all university faculties during the COVID-19 transition to remote learning." }
+    ]
+  },
+  education: {
+    titlePrefix: "Education & ",
+    titleHighlight: "Credentials",
+    eduLabel: "Education",
+    certLabel: "Certifications",
+    langLabel: "Languages",
+    education: [
+      { degree: "B.S. Computer Engineering", org: "Atatürk University", meta: "GPA 3.20 · 2022" },
+      { degree: "Business Administration & Management", org: "Computer Systems Institute", meta: "GPA 4.0 · 2024–2025" },
+      { degree: "Intensive English Program (ESL)", org: "IVY Christian College", meta: "2023" }
+    ],
+    certifications: [
+      "Embedded Hardware & Operating Systems — 28DIGITAL (2024)",
+      "IoT & Embedded Systems — Coursera / UC Irvine (2024)",
+      "Introduction to Software Engineering — IBM (2024)",
+      "Software Engineering Essentials — Coursera (2024)",
+      "Foundations of Project Management — Google (2024)"
+    ],
+    languages: [
+      { name: "Turkish", level: "Native" },
+      { name: "Kurdish", level: "Native" },
+      { name: "English", level: "Fluent · Contract Interpreter" }
+    ]
+  },
   timeline: {
     title: "./career_roadmap",
     items: [
@@ -186,6 +223,43 @@ export const tr: Dictionary = {
         tag: "FİZİKSEL YZ · GELİŞTİRİLİYOR",
         desc: "Raspberry Pi 5 + STM32 ve özel bir sensör dizisi üzerine kurulu masaüstü eşlikçisi yapay zekâ asistanı. Şu anda temel donanım ve sistem mimarisi aşamasında."
       }
+    ]
+  },
+  experience: {
+    titlePrefix: "Profesyonel ",
+    titleHighlight: "Deneyim",
+    subtitleCmd: "./is_gecmisi.log",
+    items: [
+      { role: "Bağımsız Danışman", org: "Freelance — POS, Gömülü Donanım & Web Altyapısı", period: "Oca 2023 – Günümüz", location: "Massachusetts, ABD", desc: "Restoran müşterilerine sürekli teknik destek: farklı sistemlerde POS donanım kurulumu, yapılandırma ve bakımı; ayrıca müşteri web siteleri ve arka uç/veri altyapısı bakımı." },
+      { role: "Kurucu Ortak", org: "Çok Kiracılı SaaS POS & Sipariş Platformu", period: "Mar – Haz 2026", location: "Uzaktan, ABD", desc: "Çok kiracılı bir restoran sipariş & POS SaaS platformunu (React/Vite, Express/TypeScript, PostgreSQL, Stripe Connect) kurdum ve platform mimarisine katkı sağladım." },
+      { role: "Özel Eğitmen — Gömülü Sistemler", org: "Freelance / Serbest", period: "2023 – Günümüz", location: "Massachusetts, ABD", desc: "Lise öğrencilerine, kendi hazırladığım Raspberry Pi & Arduino müfredatını haftalık düzende tasarlayıp veriyorum." },
+      { role: "Görev Jürisi — AUVSI SUAS 2025", org: "RoboNation", period: "Haz 2025", location: "Maryland, ABD", desc: "Önde gelen kolej insansız sistemler yarışmalarından birinde üniversite takımlarının otonom İHA görev performansını değerlendirdim." },
+      { role: "Gömülü Sistemler Stajyeri", org: "TÜBİTAK UME — Ulusal Metroloji Enstitüsü", period: "Ağu – Eyl 2021", location: "Kocaeli, Türkiye", desc: "Sensör tabanlı sıcaklık ölçümü için ARM STM32 programladım; Nextion LCD arayüzü ve C#/Visual Studio yer istasyonu uygulaması geliştirdim." },
+      { role: "Orta Düzey Yazılım Geliştirici", org: "Atatürk Üniversitesi — ATAUZEM", period: "Eki 2020 – May 2022", location: "Erzurum, Türkiye", desc: "COVID-19 ile uzaktan eğitime geçiş sürecinde, tüm fakültelerde Moodle e-öğrenme platformunu entegre ettim ve sürdürdüm." }
+    ]
+  },
+  education: {
+    titlePrefix: "Eğitim & ",
+    titleHighlight: "Yetkinlikler",
+    eduLabel: "Eğitim",
+    certLabel: "Sertifikalar",
+    langLabel: "Diller",
+    education: [
+      { degree: "Bilgisayar Mühendisliği Lisans", org: "Atatürk Üniversitesi", meta: "Ortalama 3.20 · 2022" },
+      { degree: "İşletme ve Yönetim", org: "Computer Systems Institute", meta: "Ortalama 4.0 · 2024–2025" },
+      { degree: "Yoğun İngilizce Programı (ESL)", org: "IVY Christian College", meta: "2023" }
+    ],
+    certifications: [
+      "Gömülü Donanım & İşletim Sistemleri — 28DIGITAL (2024)",
+      "IoT & Gömülü Sistemler — Coursera / UC Irvine (2024)",
+      "Yazılım Mühendisliğine Giriş — IBM (2024)",
+      "Yazılım Mühendisliği Temelleri — Coursera (2024)",
+      "Proje Yönetimi Temelleri — Google (2024)"
+    ],
+    languages: [
+      { name: "Türkçe", level: "Ana dil" },
+      { name: "Kürtçe", level: "Ana dil" },
+      { name: "İngilizce", level: "Akıcı · Sözleşmeli Tercüman" }
     ]
   },
   timeline: {
