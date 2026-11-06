@@ -3,6 +3,7 @@ export type Dictionary = typeof en;
 export const en = {
   nav: {
     work: "Work",
+    experience: "Experience",
     techStack: "Tech Stack",
     about: "About",
     contact: "Contact",
@@ -19,6 +20,7 @@ export const en = {
     descriptionHighlight2: "shipped games & AI systems",
     descriptionSuffix: ".",
     button: "Initialize Protocols",
+    cvButton: "Download CV",
   },
   about: {
     subtitle: "About the Engineer",
@@ -92,7 +94,10 @@ export const en = {
       { role: "Private Instructor — Embedded Systems", org: "Freelance / Self-Employed", period: "2023 – Present", location: "Massachusetts, US", desc: "Designed and deliver a self-built Raspberry Pi & Arduino curriculum to high-school students on an ongoing weekly schedule." },
       { role: "Mission Judge — AUVSI SUAS 2025", org: "RoboNation", period: "Jun 2025", location: "Maryland, US", desc: "Evaluated university teams' autonomous UAV mission performance at one of the premier collegiate unmanned-systems competitions." },
       { role: "Embedded Systems Intern", org: "TÜBİTAK UME — National Metrology Institute", period: "Aug – Sep 2021", location: "Kocaeli, Turkey", desc: "Programmed an ARM STM32 for sensor-based temperature measurement with a Nextion LCD interface and a C#/Visual Studio ground-station app." },
-      { role: "Mid-Level Software Developer", org: "Atatürk University — ATAUZEM", period: "Oct 2020 – May 2022", location: "Erzurum, Turkey", desc: "Integrated and maintained the Moodle e-learning platform across all university faculties during the COVID-19 transition to remote learning." }
+      { role: "Mid-Level Software Developer", org: "Atatürk University — ATAUZEM", period: "Oct 2020 – May 2022", location: "Erzurum, Turkey", desc: "Integrated and maintained the Moodle e-learning platform across all university faculties during the COVID-19 transition to remote learning." },
+      { role: "Contract Interpreter (Turkish/Kurdish – English)", org: "Baystate Interpreters, Inc.", period: "Feb 2026 – Present", location: "Massachusetts, US", desc: "Provide on-demand interpretation at the RMV and area hospitals, supporting patients and clients in medical and administrative settings." },
+      { role: "Computer Systems Analyst", org: "Atatürk University — Office of International Affairs", period: "Feb – Mar 2021", location: "Erzurum, Turkey", desc: "Managed IT infrastructure, hardware/software troubleshooting and systems optimization as emergency IT support for the office." },
+      { role: "Software Trainer", org: "TÜBİTAK DENEYAP (T3 Foundation)", period: "May – Aug 2021", location: "Erzurum, Turkey", desc: "Taught software and algorithmic fundamentals to middle-school students in a national TÜBİTAK / T3 Foundation technology workshop program." }
     ]
   },
   education: {
@@ -117,6 +122,16 @@ export const en = {
       { name: "Turkish", level: "Native" },
       { name: "Kurdish", level: "Native" },
       { name: "English", level: "Fluent · Contract Interpreter" }
+    ]
+  },
+  leadership: {
+    titlePrefix: "Leadership & ",
+    titleHighlight: "Recognition",
+    subtitleCmd: "./founded_and_led.sh",
+    items: [
+      { role: "Founder & Team Captain — ATA UAV Team", org: "Atatürk University", period: "2021 – 2022", desc: "Founded and led a UAV team through AUVSI SUAS qualification and competition in Maryland. Secured ~$50,000 in research funding, earned Teknokent & Rectorate recognition awards, and was featured in Turkish national media." },
+      { role: "Founder & Team Captain — ATATEB UAV Team", org: "Atatürk University", period: "2020 – 2021", desc: "Led the team's preparation and participation in the TÜBİTAK Teknofest UAV competition (Free Duty category); secured ~$20,000 in research funding." },
+      { role: "Founder & President — Technology & Computer Club (ATATEB)", org: "Atatürk University", period: "2019 – 2022", desc: "Founded and led a student technology club spanning 5 competition teams; secured $100,000+ in combined research and thesis funding, and earned an outstanding achievement award from the university and Technocity." }
     ]
   },
   timeline: {
@@ -146,6 +161,7 @@ export const en = {
 export const tr: Dictionary = {
   nav: {
     work: "Projeler",
+    experience: "Deneyim",
     techStack: "Teknoloji",
     about: "Hakkımda",
     contact: "İletişim",
@@ -155,13 +171,14 @@ export const tr: Dictionary = {
     statusValue: "AKTİF",
     availability: "Freelance ve İş Birliği İçin Müsait",
     titlePrefix: "Düşünen ",
-    titleHighlight: "Sistemler İnşa Etmek.",
+    titleHighlight: "Sistemler Kuruyorum.",
     descriptionPrefix: "",
     descriptionHighlight1: "Robotik ve gömülü donanımı",
     descriptionAnd: " ile ",
     descriptionHighlight2: "yayınlanmış oyun ve yapay zekâ sistemlerini",
     descriptionSuffix: " birleştiren Gömülü Sistem Mühendisi.",
     button: "Protokolleri Başlat",
+    cvButton: "CV İndir",
   },
   about: {
     subtitle: "Mühendis Hakkında",
@@ -235,7 +252,10 @@ export const tr: Dictionary = {
       { role: "Özel Eğitmen — Gömülü Sistemler", org: "Freelance / Serbest", period: "2023 – Günümüz", location: "Massachusetts, ABD", desc: "Lise öğrencilerine, kendi hazırladığım Raspberry Pi & Arduino müfredatını haftalık düzende tasarlayıp veriyorum." },
       { role: "Görev Jürisi — AUVSI SUAS 2025", org: "RoboNation", period: "Haz 2025", location: "Maryland, ABD", desc: "Önde gelen kolej insansız sistemler yarışmalarından birinde üniversite takımlarının otonom İHA görev performansını değerlendirdim." },
       { role: "Gömülü Sistemler Stajyeri", org: "TÜBİTAK UME — Ulusal Metroloji Enstitüsü", period: "Ağu – Eyl 2021", location: "Kocaeli, Türkiye", desc: "Sensör tabanlı sıcaklık ölçümü için ARM STM32 programladım; Nextion LCD arayüzü ve C#/Visual Studio yer istasyonu uygulaması geliştirdim." },
-      { role: "Orta Düzey Yazılım Geliştirici", org: "Atatürk Üniversitesi — ATAUZEM", period: "Eki 2020 – May 2022", location: "Erzurum, Türkiye", desc: "COVID-19 ile uzaktan eğitime geçiş sürecinde, tüm fakültelerde Moodle e-öğrenme platformunu entegre ettim ve sürdürdüm." }
+      { role: "Orta Düzey Yazılım Geliştirici", org: "Atatürk Üniversitesi — ATAUZEM", period: "Eki 2020 – May 2022", location: "Erzurum, Türkiye", desc: "COVID-19 ile uzaktan eğitime geçiş sürecinde, tüm fakültelerde Moodle e-öğrenme platformunu entegre ettim ve sürdürdüm." },
+      { role: "Sözleşmeli Tercüman (Türkçe/Kürtçe – İngilizce)", org: "Baystate Interpreters, Inc.", period: "Şub 2026 – Günümüz", location: "Massachusetts, ABD", desc: "RMV ve bölge hastanelerinde talebe bağlı tercümanlık sağlıyorum; tıbbi ve idari ortamlarda hastalara ve danışanlara destek oluyorum." },
+      { role: "Bilgisayar Sistemleri Analisti", org: "Atatürk Üniversitesi — Uluslararası İlişkiler Ofisi", period: "Şub – Mar 2021", location: "Erzurum, Türkiye", desc: "Ofise acil BT desteği olarak BT altyapısını yönettim; donanım/yazılım sorun giderme ve sistem optimizasyonu yaptım." },
+      { role: "Yazılım Eğitmeni", org: "TÜBİTAK DENEYAP (T3 Vakfı)", period: "May – Ağu 2021", location: "Erzurum, Türkiye", desc: "Ulusal bir TÜBİTAK / T3 Vakfı teknoloji atölyesinde ortaokul öğrencilerine yazılım ve algoritma temellerini öğrettim." }
     ]
   },
   education: {
@@ -260,6 +280,16 @@ export const tr: Dictionary = {
       { name: "Türkçe", level: "Ana dil" },
       { name: "Kürtçe", level: "Ana dil" },
       { name: "İngilizce", level: "Akıcı · Sözleşmeli Tercüman" }
+    ]
+  },
+  leadership: {
+    titlePrefix: "Liderlik & ",
+    titleHighlight: "Başarılar",
+    subtitleCmd: "./kurdugum_ve_yonettigim.sh",
+    items: [
+      { role: "Kurucu & Takım Kaptanı — ATA İHA Takımı", org: "Atatürk Üniversitesi", period: "2021 – 2022", desc: "Bir İHA takımını kurup AUVSI SUAS elemeleri ve Maryland'deki yarışmaya taşıdım. ~50.000 dolar araştırma fonu sağladım; Teknokent ve Rektörlük başarı ödülleri aldım ve takım Türk ulusal medyasında yer aldı." },
+      { role: "Kurucu & Takım Kaptanı — ATATEB İHA Takımı", org: "Atatürk Üniversitesi", period: "2020 – 2021", desc: "Takımın TÜBİTAK Teknofest İHA yarışmasına (Serbest Görev kategorisi) hazırlık ve katılımını yönettim; ~20.000 dolar araştırma fonu sağladım." },
+      { role: "Kurucu & Başkan — Teknoloji ve Bilgisayar Kulübü (ATATEB)", org: "Atatürk Üniversitesi", period: "2019 – 2022", desc: "5 yarışma takımını kapsayan bir öğrenci teknoloji kulübü kurdum ve yönettim; toplamda 100.000+ dolar araştırma ve tez fonu sağladım; üniversite ve Teknokent'ten üstün başarı ödülü aldım." }
     ]
   },
   timeline: {

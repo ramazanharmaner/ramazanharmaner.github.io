@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, TerminalSquare } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, TerminalSquare, Download } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function HeroSection() {
@@ -67,6 +67,13 @@ export function HeroSection() {
             <button className="px-6 py-3 md:px-8 md:py-4 bg-white text-black font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center gap-3 group shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(249,115,22,0.3)]">
               {dict.hero.button} <ArrowRight className="size-4 group-hover:translate-x-2 transition-transform duration-300" />
             </button>
+            <a
+              href="/Ramazan_Harmaner_Resume.pdf"
+              download
+              className="px-6 py-3 md:px-8 md:py-4 border border-cyan-400/40 text-cyan-300 font-bold uppercase tracking-widest text-xs md:text-sm hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center gap-3 group backdrop-blur-sm"
+            >
+              {dict.hero.cvButton} <Download className="size-4 group-hover:translate-y-0.5 transition-transform duration-300" />
+            </a>
             <div className="flex items-center gap-6 text-zinc-500">
                <a href="https://github.com/ramazanharmaner" target="_blank" rel="noreferrer" className="hover:text-cyan-400 hover:scale-110 transition-all duration-300"><Github className="size-6" /></a>
                <a href="https://linkedin.com/in/ramazanharmaner" target="_blank" rel="noreferrer" className="hover:text-orange-500 hover:scale-110 transition-all duration-300"><Linkedin className="size-6" /></a>

@@ -4,26 +4,30 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Trophy, Workflow } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-const projectStyles = [
+const projectStyles: {
+  tech: string[];
+  highlight: string;
+  links: { github?: string; live?: string };
+}[] = [
   {
     tech: ["UNITY", "C#", "ADMOB", "IAP"],
     highlight: "Trophy",
-    links: { github: "https://github.com/ramazanharmaner", live: "https://apps.apple.com/us/app/lumen-survive-the-darkness/id6793322911" }
+    links: { live: "https://apps.apple.com/us/app/lumen-survive-the-darkness/id6793322911" }
   },
   {
     tech: ["UNITY", "C#", "ADMOB", "LOCALIZATION"],
     highlight: "Workflow",
-    links: { github: "https://github.com/ramazanharmaner", live: "https://play.google.com/store/apps/details?id=com.ramazanharmaner.colorsort" }
+    links: { live: "https://play.google.com/store/apps/details?id=com.ramazanharmaner.colorsort" }
   },
   {
     tech: ["PYTHON", "FASTAPI", "CLAUDE API", "REACT"],
     highlight: "Trophy",
-    links: { github: "https://github.com/ramazanharmaner", live: "#" }
+    links: { github: "https://github.com/ramazanharmaner/finance-bot-ai" }
   },
   {
     tech: ["RASPBERRY PI 5", "STM32", "PYTHON", "SENSORS"],
     highlight: "Workflow",
-    links: { github: "https://github.com/ramazanharmaner", live: "#" }
+    links: {}
   }
 ];
 
@@ -88,12 +92,16 @@ export function ProjectsSection() {
                   )}
                 </div>
                 <div className="flex gap-4 md:gap-5 text-zinc-500">
-                  <a href={style.links.github} target="_blank" rel="noreferrer" className="hover:text-white hover:scale-110 transition-all">
-                    <Github className="size-5 md:size-6" />
-                  </a>
-                  <a href={style.links.live} className="hover:text-cyan-400 hover:scale-110 transition-all">
-                    <ExternalLink className="size-5 md:size-6" />
-                  </a>
+                  {style.links.github && (
+                    <a href={style.links.github} target="_blank" rel="noreferrer" className="hover:text-white hover:scale-110 transition-all">
+                      <Github className="size-5 md:size-6" />
+                    </a>
+                  )}
+                  {style.links.live && (
+                    <a href={style.links.live} target="_blank" rel="noreferrer" className="hover:text-cyan-400 hover:scale-110 transition-all">
+                      <ExternalLink className="size-5 md:size-6" />
+                    </a>
+                  )}
                 </div>
               </div>
 

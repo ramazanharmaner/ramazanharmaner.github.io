@@ -85,7 +85,7 @@ export function AboutSection() {
                   <p className="text-[9px] md:text-[10px] font-mono uppercase text-cyan-500 tracking-widest mt-1">{dict.about.gpaLabel}</p>
                 </div>
                 <div className="p-3 md:p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 backdrop-blur-sm min-w-[120px]">
-                  <p className="text-2xl md:text-3xl font-black text-orange-400 tracking-tighter">$50K+</p>
+                  <p className="text-2xl md:text-3xl font-black text-orange-400 tracking-tighter">$170K+</p>
                   <p className="text-[9px] md:text-[10px] font-mono uppercase text-orange-500/80 tracking-widest mt-1">{dict.about.fundingLabel}</p>
                 </div>
               </div>

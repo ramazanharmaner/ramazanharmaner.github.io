@@ -8,6 +8,7 @@ export function SiteHeader() {
 
   const navLinks = [
     { href: "projects", label: dict.nav.work },
+    { href: "experience", label: dict.nav.experience },
     { href: "skills", label: dict.nav.techStack },
     { href: "about", label: dict.nav.about },
     { href: "contact", label: dict.nav.contact },
