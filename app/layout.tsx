@@ -15,10 +15,30 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteTitle = "Ramazan Harmaner | Embedded Systems Engineer";
+const siteDescription =
+  "Embedded Systems Engineer bridging robotics & embedded hardware (STM32, Raspberry Pi, ROS/OpenCV) with shipped Unity games and Python/LLM-based AI systems.";
+const siteUrl = "https://ramazanharmaner.github.io";
+
 export const metadata: Metadata = {
-  title: "Ramazan Harmaner | Embedded Systems Engineer",
-  description:
-    "Embedded Systems Engineer bridging robotics & embedded hardware (STM32, Raspberry Pi, ROS/OpenCV) with shipped Unity games and Python/LLM-based AI systems.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  authors: [{ name: "Ramazan Harmaner" }],
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: siteTitle,
+    description: siteDescription,
+    siteName: "Ramazan Harmaner",
+    images: [{ url: "/me.jpg", width: 800, height: 800, alt: "Ramazan Harmaner" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/me.jpg"],
+  },
 };
 
 export default function RootLayout({

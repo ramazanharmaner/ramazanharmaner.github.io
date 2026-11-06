@@ -77,28 +77,13 @@ export function AboutSection() {
               dangerouslySetInnerHTML={{ __html: dict.about.description }}
             />
 
-            {/* Başarılar ve Sosyal Medya Linkleri */}
-            <motion.div variants={itemVariant} className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6 md:gap-8 pt-6 border-t border-white/5">
-              <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-                <div className="p-3 md:p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm min-w-[120px]">
-                  <p className="text-2xl md:text-3xl font-black text-white tracking-tighter">3.20</p>
-                  <p className="text-[9px] md:text-[10px] font-mono uppercase text-cyan-500 tracking-widest mt-1">{dict.about.gpaLabel}</p>
-                </div>
-                <div className="p-3 md:p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 backdrop-blur-sm min-w-[120px]">
-                  <p className="text-2xl md:text-3xl font-black text-orange-400 tracking-tighter">$170K+</p>
-                  <p className="text-[9px] md:text-[10px] font-mono uppercase text-orange-500/80 tracking-widest mt-1">{dict.about.fundingLabel}</p>
-                </div>
+            {/* Konum & Rol */}
+            <motion.div variants={itemVariant} className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 sm:gap-8 pt-6 border-t border-white/5">
+              <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
+                <MapPin className="size-3.5 text-cyan-400" /> {dict.about.location}
               </div>
-
-              <div className="flex items-center gap-6 sm:ml-4 mt-4 sm:mt-0">
-                <div className="flex flex-col items-center sm:items-start gap-2">
-                  <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
-                    <MapPin className="size-3.5 text-cyan-400" /> {dict.about.location}
-                  </div>
-                  <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
-                    <CircuitBoard className="size-3.5 text-orange-400" /> {dict.about.role}
-                  </div>
-                </div>
+              <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-mono text-zinc-300 uppercase tracking-widest">
+                <CircuitBoard className="size-3.5 text-orange-400" /> {dict.about.role}
               </div>
             </motion.div>
           </div>

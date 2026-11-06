@@ -57,9 +57,6 @@ export function ContactSection() {
           className="bg-zinc-900/40 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-20 relative overflow-hidden group shadow-[0_0_50px_rgba(0,0,0,0.5)]"
         >
           
-          {/* Subtle Grid Overlay */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none"></div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
             
             {/* Left Side: Text */}
