@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Cpu, Code2, Rocket, Zap } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -30,7 +30,7 @@ const skillGroupStyles = [
 
 export function SkillsSection() {
   const { dict } = useLanguage();
-  const containerVariant = {
+  const containerVariant: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -38,7 +38,7 @@ export function SkillsSection() {
     },
   };
 
-  const cardVariant = {
+  const cardVariant: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
   };

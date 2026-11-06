@@ -124,6 +124,7 @@ export function SystemNodes({ count = 150, radius = 1.8 }) {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
+            args={[initialLinePositions, 3]}
             count={initialLinePositions.length / 3}
             array={initialLinePositions}
             itemSize={3}
@@ -137,12 +138,14 @@ export function SystemNodes({ count = 150, radius = 1.8 }) {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
+            args={[positions, 3]}
             count={positions.length / 3}
             array={positions}
             itemSize={3}
           />
           <bufferAttribute
             attach="attributes-color"
+            args={[colors, 3]}
             count={colors.length / 3}
             array={colors}
             itemSize={3}

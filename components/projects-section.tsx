@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Github, ExternalLink, Trophy, Workflow } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -33,7 +33,7 @@ const projectStyles: {
 
 export function ProjectsSection() {
   const { dict } = useLanguage();
-  const containerVariant = {
+  const containerVariant: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -41,7 +41,7 @@ export function ProjectsSection() {
     },
   };
 
-  const cardVariant = {
+  const cardVariant: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };

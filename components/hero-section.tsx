@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, TerminalSquare, Download } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function HeroSection() {
   const { dict } = useLanguage();
-  const fadeUpVariant = {
+  const fadeUpVariant: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
       opacity: 1,
