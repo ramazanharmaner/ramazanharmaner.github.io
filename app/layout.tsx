@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Software Developer & Data Scientist",
+  title: "Ramazan Harmaner | Embedded Systems Engineer",
   description:
-    "Professional portfolio showcasing software development, data science projects, and technical skills.",
+    "Embedded Systems Engineer bridging robotics & embedded hardware (STM32, Raspberry Pi, ROS/OpenCV) with shipped Unity games and Python/LLM-based AI systems.",
 };
 
 export default function RootLayout({

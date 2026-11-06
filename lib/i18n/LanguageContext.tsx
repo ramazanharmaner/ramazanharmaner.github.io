@@ -37,7 +37,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "en" ? "tr" : "en"));
+    setLanguage(language === "en" ? "tr" : "en");
   };
 
   const dict = language === "en" ? en : tr;
