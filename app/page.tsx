@@ -11,11 +11,13 @@ import { ContactSection } from "@/components/contact-section";
 import HeroScene from "@/components/HeroScene";
 import { CustomCursor } from "@/components/custom-cursor";
 import { NoiseOverlay } from "@/components/noise-overlay";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 export default function Home() {
   return (
     <main id="main-wrapper" className="relative min-h-screen bg-[#020203] cursor-none md:cursor-auto">
       {/* Özel İmleç ve Sinematik Grain Efekti */}
+      <ScrollProgress />
       <div className="hidden md:block">
         <CustomCursor />
       </div>

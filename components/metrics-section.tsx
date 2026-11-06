@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Gamepad2, Award, Gavel, GraduationCap } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
@@ -15,13 +16,20 @@ export function MetricsSection() {
           {dict.metrics.items.map((m, i) => {
             const Icon = icons[i % icons.length];
             return (
-              <div key={m.label} className="space-y-4 group">
-                <div className={`mx-auto p-4 w-fit rounded-2xl bg-white/5 border border-white/10 group-hover:border-cyan-400/50 transition-all ${colors[i % colors.length]}`}>
+              <motion.div
+                key={m.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="space-y-4 group"
+              >
+                <div className={`mx-auto p-4 w-fit rounded-2xl bg-white/5 border border-white/10 group-hover:border-cyan-400/50 group-hover:scale-110 transition-all duration-500 ${colors[i % colors.length]}`}>
                   <Icon className="size-8" />
                 </div>
                 <h3 className="text-4xl font-black text-white italic tracking-tighter">{m.value}</h3>
                 <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-500">{m.label}</p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

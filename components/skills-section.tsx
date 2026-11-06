@@ -44,7 +44,7 @@ export function SkillsSection() {
   };
 
   return (
-    <section id="tech stack" className="py-20 md:py-32 bg-[#020203] px-4 md:px-12 relative overflow-hidden">
+    <section id="skills" className="py-20 md:py-32 bg-[#020203] px-4 md:px-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

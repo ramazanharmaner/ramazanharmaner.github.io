@@ -7,8 +7,8 @@ export function SiteHeader() {
   const { language, toggleLanguage, dict } = useLanguage();
 
   const navLinks = [
-    { href: "work", label: dict.nav.work },
-    { href: "tech stack", label: dict.nav.techStack },
+    { href: "projects", label: dict.nav.work },
+    { href: "skills", label: dict.nav.techStack },
     { href: "about", label: dict.nav.about },
     { href: "contact", label: dict.nav.contact },
   ];
