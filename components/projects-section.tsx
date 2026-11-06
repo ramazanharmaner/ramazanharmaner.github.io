@@ -6,12 +6,22 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const projectStyles = [
   {
-    tech: ["ROS", "OPENCV", "PYTHON", "STM32"],
+    tech: ["UNITY", "C#", "ADMOB", "IAP"],
+    highlight: "Trophy",
+    links: { github: "https://github.com/ramazanharmaner", live: "https://apps.apple.com/us/app/lumen-survive-the-darkness/id6793322911" }
+  },
+  {
+    tech: ["UNITY", "C#", "ADMOB", "LOCALIZATION"],
+    highlight: "Workflow",
+    links: { github: "https://github.com/ramazanharmaner", live: "https://play.google.com/store/apps/details?id=com.ramazanharmaner.colorsort" }
+  },
+  {
+    tech: ["PYTHON", "FASTAPI", "CLAUDE API", "REACT"],
     highlight: "Trophy",
     links: { github: "https://github.com/ramazanharmaner", live: "#" }
   },
   {
-    tech: ["C#", "STM32", "UART", "NEXTION"],
+    tech: ["RASPBERRY PI 5", "STM32", "PYTHON", "SENSORS"],
     highlight: "Workflow",
     links: { github: "https://github.com/ramazanharmaner", live: "#" }
   }
