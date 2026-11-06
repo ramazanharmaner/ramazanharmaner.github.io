@@ -64,9 +64,9 @@ export function HeroSection() {
           </motion.p>
 
           <motion.div custom={4} variants={fadeUpVariant} className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-6 md:gap-8 pt-4 md:pt-8">
-            <button className="px-6 py-3 md:px-8 md:py-4 bg-white text-black font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center gap-3 group shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(249,115,22,0.3)]">
+            <a href="#projects" className="px-6 py-3 md:px-8 md:py-4 bg-white text-black font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center gap-3 group shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(249,115,22,0.3)]">
               {dict.hero.button} <ArrowRight className="size-4 group-hover:translate-x-2 transition-transform duration-300" />
-            </button>
+            </a>
             <a
               href="/Ramazan_Harmaner_Resume.pdf"
               download
